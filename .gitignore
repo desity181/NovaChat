@@ -1,0 +1,29 @@
+# Build artifacts
+build/
+
+# Runtime data files
+*.log
+novachat_users.json
+
+# Build script output logs
+build_output.txt
+build_configure_output.txt
+build_verbose_output.txt
+test_output.txt
+
+# IDE / editor
+.vs/
+.vscode/
+*.user
+*.suo
+CMakeSettings.json
+
+# vcpkg per-project cache (restored on build)
+vcpkg_installed/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Claude Code local settings
+.claude/

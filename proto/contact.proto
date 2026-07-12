@@ -1,0 +1,21 @@
+syntax = "proto3";
+package novachat;
+
+message ContactInfo {
+    string user_id      = 1;
+    string username     = 2;
+    string display_name = 3;
+    string avatar_url   = 4;
+}
+
+message GetContactsRequest  { string token = 1; }
+message GetContactsResponse { repeated ContactInfo contacts = 1; }
+
+message AddFriendRequest    { string token = 1; string target_user_id = 2; }
+message AddFriendResponse   { ContactInfo contact = 1; }
+
+message DeleteFriendRequest  { string token = 1; string target_user_id = 2; }
+message DeleteFriendResponse {}
+
+message SearchUserRequest   { string token = 1; string keyword = 2; }
+message SearchUserResponse  { repeated ContactInfo users = 1; }

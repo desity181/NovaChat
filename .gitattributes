@@ -1,0 +1,26 @@
+# Auto-detect text files and normalize line endings
+* text=auto
+
+# Windows batch files must keep CRLF on checkout
+*.bat text eol=crlf
+
+# Source files use LF
+*.cpp text eol=lf
+*.h   text eol=lf
+*.hpp text eol=lf
+*.md  text eol=lf
+*.cmake text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.proto text eol=lf
+*.qss text eol=lf
+*.qrc text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.ico binary
+*.exe binary
+*.dll binary
+*.lib binary
+*.pdb binary

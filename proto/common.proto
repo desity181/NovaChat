@@ -1,0 +1,19 @@
+syntax = "proto3";
+package novachat;
+
+enum ErrorCode {
+    SUCCESS              = 0;
+    UNKNOWN_ERROR        = 1;
+    AUTH_FAILED          = 2;
+    AUTH_EXPIRED         = 3;
+    USER_NOT_FOUND       = 4;
+    USER_ALREADY_EXISTS  = 5;
+    FRIEND_NOT_FOUND     = 6;
+    FRIEND_ALREADY_EXISTS = 7;
+    MESSAGE_FAILED       = 8;
+}
+
+message ErrorResponse {
+    ErrorCode code    = 1;
+    string    message = 2;
+}

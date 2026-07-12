@@ -1,0 +1,58 @@
+{
+    "version": 6,
+    "configurePresets": [
+        {
+            "name": "windows-debug",
+            "displayName": "Windows Debug (MSVC + Ninja)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/debug",
+            "toolchainFile": "C:/vcpkg/scripts/buildsystems/vcpkg.cmake",
+            "environment": {
+                "VCPKG_ROOT": "C:/vcpkg",
+                "VCPKG_FORCE_SYSTEM_BINARIES": "1",
+                "QT6_DIR": "D:/software/qt6/6.8.3/msvc2022_64",
+                "PATH": "D:/software/vs2022/installer/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin;D:/software/vs2022/installer/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja;$penv{PATH}"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_PREFIX_PATH": "D:/software/qt6/6.8.3/msvc2022_64",
+                "CMAKE_MAKE_PROGRAM": "D:/software/vs2022/installer/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe"
+            }
+        },
+        {
+            "name": "windows-release",
+            "displayName": "Windows Release (MSVC + Ninja)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/release",
+            "toolchainFile": "C:/vcpkg/scripts/buildsystems/vcpkg.cmake",
+            "environment": {
+                "VCPKG_ROOT": "C:/vcpkg",
+                "VCPKG_FORCE_SYSTEM_BINARIES": "1",
+                "QT6_DIR": "D:/software/qt6/6.8.3/msvc2022_64",
+                "PATH": "D:/software/vs2022/installer/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin;D:/software/vs2022/installer/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja;$penv{PATH}"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_PREFIX_PATH": "D:/software/qt6/6.8.3/msvc2022_64",
+                "CMAKE_MAKE_PROGRAM": "D:/software/vs2022/installer/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "windows-debug",
+            "configurePreset": "windows-debug"
+        },
+        {
+            "name": "windows-release",
+            "configurePreset": "windows-release"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "windows-debug",
+            "configurePreset": "windows-debug",
+            "output": { "outputOnFailure": true }
+        }
+    ]
+}

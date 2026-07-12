@@ -1,0 +1,132 @@
+/* NovaChat V1 — Global Style Sheet */
+
+QMainWindow, QDialog {
+    background-color: #F0F0F0;
+    font-size: 13px;
+}
+
+/* ── Left panel ────────────────────────────────────────────────── */
+QTabWidget::pane {
+    border: none;
+    background: #F7F7F7;
+}
+QTabBar::tab {
+    background: #EAEAEA;
+    padding: 8px 16px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-size: 13px;
+    color: #555;
+}
+QTabBar::tab:selected {
+    background: #F7F7F7;
+    border-bottom: 2px solid #07C160;
+    color: #07C160;
+    font-weight: bold;
+}
+QTabBar::tab:hover:!selected {
+    background: #E4E4E4;
+}
+
+/* ── List widgets ──────────────────────────────────────────────── */
+QListWidget {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+QListWidget::item {
+    padding: 10px 12px;
+    border-bottom: 1px solid #EBEBEB;
+    color: #333;
+}
+QListWidget::item:selected {
+    background: #D8F5E4;
+    color: #1A7A46;
+}
+QListWidget::item:hover:!selected {
+    background: #EFEFEF;
+}
+
+/* ── Input fields ──────────────────────────────────────────────── */
+QLineEdit {
+    border: 1px solid #DCDCDC;
+    border-radius: 6px;
+    padding: 6px 10px;
+    background: #FFFFFF;
+    color: #333;
+    selection-background-color: #07C160;
+}
+QLineEdit:focus {
+    border-color: #07C160;
+}
+
+/* ── Buttons ───────────────────────────────────────────────────── */
+QPushButton {
+    background: #07C160;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 18px;
+    font-size: 13px;
+}
+QPushButton:hover    { background: #06AD56; }
+QPushButton:pressed  { background: #059A4C; }
+QPushButton:disabled { background: #B0B0B0; color: #888; }
+
+/* Destructive action button (objectName = "dangerButton") */
+QPushButton#dangerButton         { background: #E53E3E; }
+QPushButton#dangerButton:hover   { background: #C53030; }
+QPushButton#dangerButton:pressed { background: #9B2C2C; }
+
+/* ── Scroll bars ───────────────────────────────────────────────── */
+QScrollBar:vertical {
+    width: 6px;
+    background: transparent;
+}
+QScrollBar::handle:vertical {
+    background: #C0C0C0;
+    border-radius: 3px;
+    min-height: 30px;
+}
+QScrollBar::handle:vertical:hover { background: #A0A0A0; }
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical { background: none; border: none; }
+QScrollBar:horizontal { height: 0px; }
+
+/* ── Status bar ────────────────────────────────────────────────── */
+QStatusBar {
+    background: #F0F0F0;
+    color: #666;
+    font-size: 12px;
+    border-top: 1px solid #E0E0E0;
+}
+
+/* ── Dialogs ───────────────────────────────────────────────────── */
+QDialog { background: #FFFFFF; }
+
+/* ── Menu bar ──────────────────────────────────────────────────── */
+QMenuBar {
+    background: #FAFAFA;
+    border-bottom: 1px solid #E8E8E8;
+}
+QMenuBar::item:selected {
+    background: #E8F8EF;
+    color: #07C160;
+}
+QMenu {
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+}
+QMenu::item:selected {
+    background: #E8F8EF;
+    color: #07C160;
+}
+
+/* ── Splitter handle ───────────────────────────────────────────── */
+QSplitter::handle {
+    background: #E0E0E0;
+    width: 1px;
+}
